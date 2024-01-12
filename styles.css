@@ -1,0 +1,26 @@
+
+.topnav {
+    background-color: bisque;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 8px 0px;
+}
+
+.topnav img {
+    border-radius: 6%;
+    vertical-align: middle;
+}
+
+.topnav a {
+    text-decoration: none;
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 16px;
+}
+
+.topnav a:hover {
+    color: grey;
+}
