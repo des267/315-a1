@@ -1,0 +1,10 @@
+.footer {
+    background-color:aquamarine;
+    overflow: hidden;
+    width: 100%;
+}
+
+.footer p {
+    color: black;
+    text-align: center;
+}
