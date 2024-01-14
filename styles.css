@@ -29,14 +29,28 @@ nav li a {
     padding: 16px 12px;
     text-decoration: none;
     font-size: 20px;
+    font-family: "Poppins", "Open Sans";
 }
 
-nav li a:hover:not(.active) {
-  background-color: #d1d1d1;
+nav li a:hover:not(.visited) {
+  background-color: #ff9367;
+    color: white;
+}
+
+nav li a:visited {
+    color: #ff8624;
+}
+
+nav li a:link {
+    color: #ff8624;
 }
 
 nav .active {
   background-color: #04AA6D;
+}
+
+h1 {
+    font-size: 30px;
 }
 
 .content {
@@ -46,10 +60,27 @@ nav .active {
 
 .content section {
     border-style: groove;
-    padding: 16px;
-    margin: 8px;
+    padding: 8px 16px;
+    margin: 24px 8px;
 }
 
 .content section h1 {
     font-family: "Sofia", sans-serif;
+}
+
+.article {
+    padding: 8px;
+}
+
+.article img {
+    max-width: 100%;
+    width: 800px;
+}
+
+.article h2 {
+    color: crimson;
+}
+
+.article a {
+    text-decoration: none;
 }
