@@ -8,10 +8,13 @@ body {margin:0;}
     100% {background-color: aquamarine}
 }
 
-nav ul {
+nav {
     top: 0;
     position: fixed;
     width: 100%;
+}
+
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -20,23 +23,20 @@ nav ul {
     animation-name: nav_animate;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-}
-
-nav li {
-    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 nav li img {
-    width: 3.5vw;
-    max-width: 100%;
-    margin: 10% 15%;
-    display: block;
+    height: 3.5vw;
+    padding-top: 0.25vw;
+    padding-left: 0.25vw;
+    padding-right: 0.25vw;
 }
 
 nav li a {
-    display: block;
-    text-align: center;
-    padding: 1vw 2vw;
+    padding: 1vw 2.5vw;
     text-decoration: none;
     font-size: 1.5vw;
     font-family: Poppins, sans-serif;
@@ -45,7 +45,7 @@ nav li a {
 nav li a:hover:not(.visited) {
     background-color: #ff9367;
     color: white;
-    font-size: 2.1vw;
+    font-size: 1.9vw;
 }
 
 nav li a:visited {
@@ -91,13 +91,32 @@ nav .active {
     width: 100%;
 }
 
+/*Fades images away with scrolling*/
+@keyframes fade-away{
+    from {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
+    to {
+        opacity: 0;
+        clip-path: inset(75% 25% 25% 25%);
+    }
+}
+
 #content_img {
     display: block;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 15%;
+
+    /*Fade away image animation*/
+    view-timeline-name: --revealing-image;
+    view-timeline-axis: block;
+    animation: linear fade-away both;
+    animation-timeline: --revealing-image;
+    animation-range: entry 175% cover 80%;
 }
 
 .article_container {
@@ -117,7 +136,6 @@ nav .active {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
-    transition: max-width 0.1s 0.1s;
 }
 
 .article a {
@@ -125,9 +143,6 @@ nav .active {
     font-family: "Poppins", sans-serif;
     font-size: 2vw;
     color: #ff8624;
-    /*overflow: hidden;*/
-    /*white-space: nowrap;*/
-    /*text-overflow: "...";*/
 }
 
 .article p {
@@ -137,10 +152,15 @@ nav .active {
 footer {
     background-color: #caffe3;
     bottom: 0;
-    left: 0;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 footer p {
     text-align: center;
     font-size: 1.5vw;
+    font-family: "Poppins", sans-serif;
 }
