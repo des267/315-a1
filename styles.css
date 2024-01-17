@@ -1,11 +1,11 @@
 body {margin:0;}
 
 @keyframes nav_animate {
-    0%  {background-color: aquamarine}
-    25% {background-color: lightgreen}
-    50% {background-color: dodgerblue}
-    75% {background-color: mediumpurple}
-    100% {background-color: aquamarine}
+    0%  {background-color: aquamarine; color: yellowgreen}
+    25% {background-color: lightgreen; color: fuchsia}
+    50% {background-color: dodgerblue; color: red}
+    75% {background-color: mediumpurple; color: white}
+    100% {background-color: aquamarine; color: yellowgreen}
 }
 
 nav {
@@ -130,6 +130,8 @@ nav .active {
     width: 70%;
     margin-top: 5%;
     margin-bottom: 5%;
+    border-style: groove;
+    padding: 2%;
 }
 
 .article img {
@@ -150,17 +152,23 @@ nav .active {
 }
 
 footer {
-    background-color: #caffe3;
     bottom: 0;
     margin-top: 5%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-
+    justify-content: center;
+    animation-name: nav_animate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 footer p {
     text-align: center;
     font-size: 1.5vw;
     font-family: "Poppins", sans-serif;
+}
+
+footer img {
+    height: 3vw;
 }
